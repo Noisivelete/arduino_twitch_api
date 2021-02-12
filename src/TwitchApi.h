@@ -71,7 +71,7 @@ struct StreamInfo
 class TwitchApi
 {
   public:
-    TwitchApi(Client &client, char *clientId);
+    TwitchApi(Client &client, char *clientId, char *secret);
     bool makeGetRequestWithClientId(char *command);
     UserData getUserData(char *loginName);
     FollowerData getFollowerData(char *id);
@@ -82,6 +82,7 @@ class TwitchApi
     Client *client;
 
   private:
+	char *secret;
     char *_clientId;
     void closeClient();
 };
