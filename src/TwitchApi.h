@@ -24,7 +24,7 @@ Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA 02110-1301 USA
 #include <Client.h>
 
 #define TWITCH_HOST "api.twitch.tv"
-// Fingerprint correct as of October 6th 2018
+// Fingerprint correct as of February 12, 2021
 #define TWITCH_FINGERPRINT "BC 73 A5 9C 6E EE 38 43 A6 37 FC 32 CF 08 16 DC CF F1 5A 66"
 #define TWITCH_TIMEOUT 1500
 
