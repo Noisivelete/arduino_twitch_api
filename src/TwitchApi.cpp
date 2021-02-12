@@ -20,10 +20,11 @@
 
 #include "TwitchApi.h"
 
-TwitchApi::TwitchApi(Client &client, char *clientId)
+TwitchApi::TwitchApi(Client &client, char *clientId, char *secret)
 {
     this->client = &client;
     this->_clientId = clientId;
+	this->secret = secret;
 }
 
 bool TwitchApi::makeGetRequestWithClientId(char *command)
@@ -59,6 +60,9 @@ bool TwitchApi::makeGetRequestWithClientId(char *command)
 
     client->print(F("Client-ID: "));
     client->println(_clientId);
+	
+	client->print(F("Authorization: Bearer "));
+	client->println(secret);
 
     client->println(F("Cache-Control: no-cache"));
 
